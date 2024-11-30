@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Form | TopShelf Recipes</title>
+
+  <link rel="icon" href="img/topshelf-logo.svg">
+  <link rel="stylesheet" href="css/contact-page.css">
+</head>
+
+<!-- =================HEADER=============== -->
+<body>
+  <header class="nav-container">
+    <a href="index.html" class="logo"><img src="img/topshelf-logo.svg" alt="Home Logo"></a>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="under-construction.html">About</a></li>
+        <li><a href="under-construction.html">News</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="cta"><button>Contact</button></a>
+  </header>
+
+  <!-- =================MAIN CONTENT=============== -->
+  <div class="form-wrapper"> 
+    
+    <form name="contact-form" action="/thank-you" method="POST" target="_self" netlify>
+      <h1>Contact Us</h1><hr>
+      <label for="name">Name: </label>
+      <input name="name" type="text" id="name" class="form-name form-input" placeholder="Joe Smith" minlength="2" maxlength="350" required><br>
+      <label for="email">Email: </label>
+      <input name="email" type="email" id="email" class="form-email form-input" placeholder="joe.smith@example.com" maxlength="200" required><br>
+      <label for="message">Message: </label><br>
+      <textarea name="messsage" id="message" class="form-message form-input" cols="40" rows="15" placeholder="Message here..." minlength="30" maxlength="700" required></textarea><br>
+      <input type="submit" value="Send">
+    </form>
+  </div>
+
+  <!-- =================FOOTER=============== -->
+  <footer>
+    <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" class="credit-link">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" class="credit-link"> www.flaticon.com</a>
+    </div>
+    <a href="https://blacklivesmatter.com/what-matters-2020/" class="blm-link">#blacklivesmatter</a>
+    <a href="#back-to-top" class="back-to-top-link">Back to Top</a>
+  </footer> 
+
+</body>
+
+</html>
