@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap');
+
+:root {
+  --gray: #6e6e6e;
+  --author-credit: #837d7d;
+  --bg-color: #24252A;
+  --light-blue: #0088A9;
+  --breakfast: #B0BFB5;
+  --breakfast-bg: #92A699;
+  --lunch: #709e88;
+  --lunch-bg: #598e74;
+  --dinner: #DD1512; /*#E21612*/
+  --dinner-bg: #CB1310; /*#C01310*/
+  --dessert: #5E4C45;
+  --dessert-bg: #50413B;
+  scroll-behavior: smooth;
+  outline: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.nav-links ul li, .nav-links ul li a, .cta button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: wheat;
+  text-decoration: none;
+}
+
+.nav-links ul li {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0 30px;
+  border-right: 2px solid var(--gray);
+}
+
+.nav-links li:last-child {
+  border-right: none;
+}
+
+.logo img { 
+  cursor: pointer; 
+  width: 60px; 
+  height: 60px; 
+  /* filter: contrast(0); */
+  transition: all 0.4s ease;
+}
+
+/* .logo:hover img {
+  filter: opacity(25%); 
+} */
+
+.nav-links li a {
+  transition: 0.4s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--light-blue);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15%;
+  -webkit-box-shadow: 0 5px 5px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 5px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  position: sticky;
+  position: -webkit-sticky;
+  border-radius: 0 0 25px 25px;
+  top: 0;
+  background-color: var(--bg-color);
+  z-index: 5;
+}
+
+.cta button {
+  width: 100%;
+  padding: 10px 20px;
+  background-image: linear-gradient(rgba(7, 169, 208, 1) 5%, rgba(5, 125, 154, 1) 95%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  outline: none;
+}
+
+.cta button:hover {
+  width: 110%;
+}
+
+/* ====================== Main Recipe Stuff ===================== */
+.title-card {
+  font-family: "Poppins", sans-serif;
+  color: wheat;
+  font-weight: 400;
+  border-bottom: 3px solid;
+  margin-top: 60px;
+  margin-left: 15px;
+  margin-bottom: 75px;
+  padding: 0;
+  width: 250px;
+}
+
+.breakfast-title {
+  border-color: var(--breakfast);
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(rgb(196, 173, 73), rgb(237, 218, 136)); */
+}
+
+.lunch-title {
+  border-color: var(--lunch);
+}
+
+.dinner-title {
+  border-color: var(--dinner);
+}
+
+.dessert-title {
+  border-color: var(--dessert);
+}
+
+/* ================Breakfast=============== */
+.breakfast {
+  display: grid;
+  background-color: var(--breakfast-bg);
+  border-radius: 15px;
+  width: 100%;
+  grid-template: auto / repeat(3, 300px);
+  grid-gap: 20px 10px;
+  justify-content: space-around;
+  align-items: stretch;
+  grid-template-areas:
+    "no1 no2 no3";
+}
+
+.breakfast a {
+  text-decoration: underline;
+  color: var(--bg-color);
+  transition: all 0.4s ease;
+}
+
+.breakfast a:hover {
+  color: var(--light-blue);
+}
+
+.b1 {
+  grid-area: no1;
+}
+
+.b2 {
+  grid-area: no2;
+}
+
+.b3 {
+  grid-area: no3;
+}
+
+.b-recipe {
+  background-color: var(--breakfast);
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-radius: 7px;
+  -webkit-box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+.b-recipe h2 {
+  font-family: "Poppins";
+  font-size: 18px;
+  padding: 5px 10%;
+  color: var(--bg-color);
+  border-bottom: 2px solid var(--breakfast-bg);
+}
+
+.b-recipe h4 {
+  color: var(--author-credit);
+  padding: 5px 10%;
+  font-family: "Noto Serif", serif;
+}
+
+.b-recipe h4 a {
+  color: var(--author-credit);
+  text-decoration: none;
+  transition: 0.75s ease;
+}
+
+.b-recipe h4 a:hover {
+  color: var(--light-blue);
+}
+
+.b-recipe p {
+  font-family: "Poppins";
+  font-size: 14px;
+  padding: 5px 10%;
+  color: var(--bg-color);
+}
+
+.b-recipe img {
+  max-height: 52%;
+  max-width: 100%;
+  border-radius: 7px 7px 0 0;
+  padding: 0;
+}
+
+/* ================Lunch=============== */
+.lunch {
+  display: grid;
+  background-color: var(--lunch-bg);
+  border-radius: 15px;
+  width: 100%;
+  grid-template: auto / repeat(3, 300px);
+  grid-gap: 20px 10px;
+  justify-content: space-around;
+  align-items: stretch;
+  grid-template-areas:
+    "no1 no2 no3";
+}
+
+.lunch a {
+  text-decoration: underline;
+  color: var(--bg-color);
+  transition: all 0.4s ease;
+}
+
+.lunch a:hover {
+  color: var(--light-blue);
+}
+
+.l1 {
+  grid-area: no1;
+}
+
+.l2 {
+  grid-area: no2;
+}
+
+.l2 img {
+  width: 100%;
+}
+
+.l3 {
+  grid-area: no3;
+}
+
+.l-recipe {
+  background-color: var(--lunch);
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-radius: 7px;
+  -webkit-box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+.l-recipe h2 {
+  font-family: "Poppins";
+  font-size: 18px;
+  padding: 5px 10%;
+  color: var(--bg-color);
+  border-bottom: 2px solid var(--lunch-bg);
+}
+
+.l-recipe h4 {
+  color: var(--author-credit);
+  padding: 5px 10%;
+  font-family: "Noto Serif", serif;
+}
+
+.l-recipe h4 a {
+  color: var(--author-credit);
+  text-decoration: none;
+  transition: 0.75s ease;
+}
+
+.l-recipe h4 a:hover {
+  color: var(--light-blue);
+}
+
+.l-recipe p {
+  font-family: "Poppins";
+  font-size: 14px;
+  padding: 5px 10%;
+  color: var(--bg-color);
+}
+
+.l-recipe img {
+  max-height: 52%;
+  max-width: 100%;
+  border-radius: 7px 7px 0 0;
+  padding: 0;
+}
+
+/* ================ Dinner =============== */
+.dinner {
+  display: grid;
+  background-color: var(--dinner-bg);
+  border-radius: 15px;
+  width: 100%;
+  grid-template: auto / repeat(3, 300px);
+  grid-gap: 20px 10px;
+  justify-content: space-around;
+  align-items: stretch;
+  grid-template-areas:
+    "no1 no2 no3";
+}
+
+.dinner a {
+  text-decoration: underline;
+  color: var(--bg-color);
+  transition: all 0.4s ease;
+}
+
+.dinner a:hover {
+  color: var(--light-blue);
+}
+
+.d1 {
+  grid-area: no1;
+}
+
+.d1 img {
+  width: 100%;
+}
+
+.d2 {
+  grid-area: no2;
+}
+
+.d2 img {
+  width: 100%;
+}
+
+.d3 {
+  grid-area: no3;
+}
+
+.d-recipe {
+  background-color: var(--dinner);
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-radius: 7px;
+  -webkit-box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+.d-recipe h2 {
+  font-family: "Poppins";
+  font-size: 18px;
+  padding: 5px 10%;
+  color: var(--bg-color);
+  border-bottom: 2px solid var(--dinner-bg);
+}
+
+.d-recipe h4 {
+  color: var(--author-credit);
+  padding: 5px 10%;
+  font-family: "Noto Serif", serif;
+}
+
+.d-recipe h4 a {
+  color: var(--author-credit);
+  text-decoration: none;
+  transition: 0.75s ease;
+}
+
+.d-recipe h4 a:hover {
+  color: var(--light-blue);
+}
+
+.d-recipe p {
+  font-family: "Poppins";
+  font-size: 14px;
+  padding: 5px 10%;
+  color: var(--bg-color);
+}
+
+.d-recipe img {
+  max-height: 52%;
+  max-width: 100%;
+  border-radius: 7px 7px 0 0;
+  padding: 0;
+}
+
+/* ================== Dessert ================== */
+.dessert {
+  display: grid;
+  background-color: var(--dessert-bg);
+  border-radius: 15px;
+  width: 100%;
+  grid-template: auto / repeat(3, 300px);
+  grid-gap: 20px 10px;
+  justify-content: space-around;
+  align-items: stretch;
+  grid-template-areas:
+    "no1 no2 no3";
+}
+
+.dessert a {
+  text-decoration: underline;
+  color: var(--bg-color);
+  transition: all 0.4s ease;
+}
+
+.dessert a:hover {
+  color: var(--light-blue);
+}
+
+.dd1 {
+  grid-area: no1;
+}
+
+.dd2 {
+  grid-area: no2;
+}
+
+.dd2 img {
+  width: 100%;
+}
+
+.dd3 {
+  grid-area: no3;
+}
+
+.dd3 img {
+  width: 100%;
+}
+
+.dd-recipe {
+  background-color: var(--dessert);
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border-radius: 7px;
+  -webkit-box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+.dd-recipe h2 {
+  font-family: "Poppins";
+  font-size: 18px;
+  padding: 5px 10%;
+  color: var(--bg-color);
+  border-bottom: 2px solid var(--dessert-bg);
+}
+
+.dd-recipe h4 {
+  color: var(--author-credit);
+  padding: 5px 10%;
+  font-family: "Noto Serif", serif;
+}
+
+.dd-recipe h4 a {
+  color: var(--author-credit);
+  text-decoration: none;
+  transition: 0.75s ease;
+}
+
+.dd-recipe h4 a:hover {
+  color: var(--light-blue);
+}
+
+.dd-recipe p {
+  font-family: "Poppins";
+  font-size: 14px;
+  padding: 5px 10%;
+  color: var(--bg-color);
+}
+
+.dd-recipe img {
+  max-height: 52%;
+  max-width: 100%;
+  border-radius: 7px 7px 0 0;
+  padding: 0;
+}
+
+/* ============================FOOTER======================== */
+footer {
+  display: flex;
+  box-shadow: 0 -4px 10px 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 -4px 10px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 30px 30px 0 0;
+  height: 125px;
+  padding: 10px;
+  /* position: absolute; */
+  bottom: 5px;
+  margin-top: 75px;
+  /* border-top: 3px solid var(--gray); */
+  align-items: flex-end;
+  justify-content: space-between;
+  font-family: "Poppins";
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.back-to-top-link {
+  text-decoration: none;
+  color: var(--gray);
+  margin-right: 10px;
+  transition: 0.4s ease;
+}
+
+.back-to-top-link:hover {
+  color: var(--light-blue);
+}
+.credit-link {
+  text-decoration: underline;
+  color: var(--gray);
+  transition: 0.4s ease;
+}
+
+.credit-link:hover {
+  color: var(--light-blue);
+}
+
+.blm-link {
+  color: var(--gray);
+  text-decoration: underline;
+  text-emphasis: bold;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+.blm-link:hover {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--light-blue);
+}
+
+@media only screen and (max-width: 500px) {
+  .breakfast, .lunch, .dinner, .dessert {
+    grid-template-columns: auto;
+    padding: 50px;
+    grid-template-areas:
+        "no1"
+        "no2"
+        "no3";
+  }
+
+  .nav-links ul li a, .cta button {
+    font-size: 20px;
+  }
+
+  footer div, footer a {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
